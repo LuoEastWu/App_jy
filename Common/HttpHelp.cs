@@ -69,7 +69,6 @@ namespace Common
             return stringValue;
         }
 
-
         /// <summary>
         /// send the get request based on HttpWebRequest
         /// </summary>
