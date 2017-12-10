@@ -23,20 +23,13 @@ namespace App_Jy
         private TextView tv_version;
         private EditText ed_login_num;
         private EditText ed_login_pass;
-        private String result;
-        private ProgressDialog p;
-        private String result_mhdata;
-        private Button btn_login;
-        private String result_mhdata1;
-        private Bitmap bitmap_logo;
-        private Button btn_set;
-        private ImageView img_net;
-        private MainActivity mContext;
-        private String http;
-        private ProgressDialog pDialog;
 
-        private String enter;
-        private String port;
+
+        private Button btn_login;
+
+        private Button btn_set;
+
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

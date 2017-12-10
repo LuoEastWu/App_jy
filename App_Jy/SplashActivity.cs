@@ -15,18 +15,18 @@ using System.Threading.Tasks;
 using static Common.DownloadHelper;
 using System.Threading;
 using Microsoft.Data.Sqlite;
+using System.IO;
 
 namespace App_Jy
 {
     [Activity(Label = "集运App", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class SplashActivity : Activity
     {
-        private SplashActivity mContext;
+
         private TextView tv_version_code;
         private TextView tv_progress;
-        private EditText ed_enter_sp;
-        private EditText ed_port_sp;
-        private int name;
+
+
         private String url_down;
         private ProgressBar _progressBar;
         private System.Threading.Timer _timer;

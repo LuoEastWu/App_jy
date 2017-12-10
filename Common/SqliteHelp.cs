@@ -64,10 +64,7 @@ namespace Common
 
         public static SqlSugarClient GetInstance()
         {
-            if (!File.Exists(Config.ConnectionString))
-            {
-                SqliteConnection sqliteConn = new SqliteConnection(Config.ConnectionString);
-            }
+           
             SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
             { ConnectionString = Config.ConnectionString, DbType = DbType.Sqlite, IsAutoCloseConnection = true });
             db.Ado.IsEnableLogEvent = true;
