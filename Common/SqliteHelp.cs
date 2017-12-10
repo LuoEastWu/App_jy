@@ -64,9 +64,13 @@ namespace Common
 
         public static SqlSugarClient GetInstance()
         {
-           
+            
             SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
             { ConnectionString = Config.ConnectionString, DbType = DbType.Sqlite, IsAutoCloseConnection = true });
+            if (!File.Exists(Config.ConnectionString))
+            {
+                db.CodeFirst.InitTables(Config.ConnectionString);
+            }
             db.Ado.IsEnableLogEvent = true;
             db.Ado.LogEventStarting = (sql, pars) =>
             {
