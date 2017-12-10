@@ -14,6 +14,7 @@ using Common;
 using System.Threading.Tasks;
 using static Common.DownloadHelper;
 using System.Threading;
+using Microsoft.Data.Sqlite;
 
 namespace App_Jy
 {
@@ -38,6 +39,10 @@ namespace App_Jy
             // Create your application here
             SetContentView(Resource.Layout.Splash);
             IntiView();
+            Common.SqliteHelp.Config.ConnectionString= Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "userinfo.db3");
+          
+
+
         }
 
        

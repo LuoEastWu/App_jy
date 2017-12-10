@@ -118,12 +118,17 @@ namespace App_Jy
 
         private void Btn_set_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
             Toast.MakeText(this, "开始登录吧！", ToastLength.Short).Show();
+           
+           
+                SqlSugar.SqlSugarClient db = Common.SqliteHelp.GetInstance();
+            var insertObj = new Models.UserInfo { UserName = "jack",Pwd="123"};
+            int dd= db.Insertable(insertObj).ExecuteCommand();
         }
 
 
